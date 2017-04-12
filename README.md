@@ -1,1 +1,1 @@
-Repository refer at the subject Computational Inteligence.
+Repository refer at the subject Computational Intelligence.
