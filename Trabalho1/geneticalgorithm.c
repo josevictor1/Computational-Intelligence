@@ -1,7 +1,5 @@
 #include "geneticalgorithm.h"
 
-using namespace std;
-
 int mypow(int number, int expoent){
     int i, aux = number;
     for(i = 0; i < expoent - 1; i++){
@@ -35,7 +33,7 @@ void calcnumbers(int *vet){
     //std::cout << "money"<< number3<< '\n';
     vet[10] = abs(number1 - number3);
 }
-
+/*
 bool verify(int *vet, int number, int range){
     int i;
     for(i = 0; i < range; i++){
@@ -44,6 +42,16 @@ bool verify(int *vet, int number, int range){
         }
     }
     return true;
+}*/
+
+int verify1(int *vet, int number, int range){
+    int i;
+    for(i = 0; i < range; i++){
+        if(vet[i] == number){
+            return 0;
+        }
+    }
+    return 1;
 }
 
 void percentage(int solution[100][12], float qtd[9]){
