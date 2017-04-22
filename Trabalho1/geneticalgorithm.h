@@ -26,6 +26,9 @@ int calctcross_int(int population, int percentage);// calculate the numbers of p
 int search(int vet[10], int value); // realize the search in the array of integers
 void print(int *vet,int n);
 void crossover(int solutions[TPOP][12], int parent1[10], int parent2[10], int number, int range);
-void quickSort(int solutions[TPOP][12],int *vetor, int comeco, int fim);
+//void quickSort(int solutions[TPOP][12],int *vetor, int comeco, int fim);
+void quickSort(int solutions[180][12], int comeco, int fim);
 void printmatrix(int solutions[TPOP][12]);
-int verify1(int *vet, int number, int range);
+//int verify1(int *vet, int number, int range);
+void cleanarray(int *vet, int n);
+void exchange(int element1[12],int element2[12]);

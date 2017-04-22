@@ -1,6 +1,6 @@
 #include "geneticalgorithm.h"
 
-using namespace std;
+//using namespace std;
 
 int mypow(int number, int expoent){
     int i, aux = number;
@@ -11,6 +11,15 @@ int mypow(int number, int expoent){
 
     return number;
 }
+
+void cleanarray(int *vet, int n){
+    int i;
+
+    for (i = 0; i < 0; i++){
+        vet[i] = 0;
+    }
+}
+
 /*First Version
 void calcnumbers(int *vet, int *resultcalculated, int *expectedresult){
 
@@ -46,7 +55,7 @@ bool verify(int *vet, int number, int range){
     return true;
 }
 
-void percentage(int solution[100][12], float qtd[9]){
+void percentage(int solution[TPOP][12], float qtd[9]){
     int i, j;
     for(i = 0; i < 100; i++){
         for(j = 0; j < 8; j++){
@@ -55,7 +64,7 @@ void percentage(int solution[100][12], float qtd[9]){
     }
 }
 
-int maxelement(int solutions[100][12], int *tournamentelements, int tour){
+int maxelement(int solutions[TPOP][12], int *tournamentelements, int tour){
 
     int i, max = 0;
 
@@ -67,7 +76,7 @@ int maxelement(int solutions[100][12], int *tournamentelements, int tour){
     return tournamentelements[max];
 }
 
-int minelement(int solutions[100][12], int *tournamentelements, int tour){
+int minelement(int solutions[TPOP][12], int *tournamentelements, int tour){
 
     int i, min = 0;
 
@@ -137,36 +146,37 @@ void crossover(int solutions[180][12], int parent1[10], int parent2[10], int num
 }
 
 
-void quickSort(int solutions[180][12],int *vet, int comeco, int fim){
-    int pivot, aux;
+void quickSort(int solutions[180][12], int comeco, int fim){
+    int pivot,aux[12];
 	int i, j;
 
-	pivot = vet[(comeco+fim)/2];
+	pivot = (comeco+fim)/2;
 	i = comeco;
 	j = fim;
 
 	while(i <= j){
-		while(solutions[vet[i]][10] < solutions[pivot][10])
+		while(solutions[i][10] < solutions[pivot][10])
 			i++;
 
-		while(solutions[vet[j]][10] > solutions[pivot][10])
+		while(solutions[j][10] > solutions[pivot][10])
 			j--;
 
 		if(i <= j){
-			aux = vet[i];
-			vet[i] = vet[j];
-			vet[j] = aux;
+			exchange(aux,solutions[i]);
+			exchange(solutions[i],solutions[j]);
+			exchange(solutions[j],aux);
 			i++;j--;
         }
 	}
 
 	if(j > comeco)
-		quickSort(solutions, vet, comeco, j);
+		quickSort(solutions, comeco, j);
 
 	if(i < fim)
-		quickSort(solutions, vet, j+1, fim);
+		quickSort(solutions, j+1, fim);
 
 }
+
 
 void printmatrix(int solutions[180][12]){
     int i;
@@ -178,4 +188,12 @@ void printmatrix(int solutions[180][12]){
     }
     printf("\n");
 
+}
+
+void exchange(int element1[12],int element2[12]){
+    int i;
+
+    for(i = 0; i < 12; i++){
+        element1[i] = element2[i];
+    }
 }

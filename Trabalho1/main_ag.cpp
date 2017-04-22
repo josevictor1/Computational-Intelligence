@@ -32,6 +32,8 @@ int main(int argc, char const *argv[]) {
             sorted[i] = i;
         }
         Nger = 0;
+        cleanarray(parents,TCROS);
+
         while (find && Nger < NGEN){
 
             int tournamentelements[TOUR];
@@ -87,7 +89,22 @@ int main(int argc, char const *argv[]) {
                     }
             }
 
-            quickSort(solutions, sorted, 0, 179);
+            for(i = 100; i < 180; i++){
+                    p = rand()%100;
+                    n1 = rand()%10;
+                    n2 = rand()%10;
+                    while (n1 == n2) {
+                        n2 = rand()%10;
+                    }
+                    if(p <= 10){
+                        number = solutions[i][n1];
+                        solutions[i][n1] = solutions[i][n2];
+                        solutions[i][n2] = number;
+                        calcnumbers(solutions[i]);
+                    }
+            }
+
+            quickSort(solutions, 0, 179);
 
 
             if(solutions[sorted[0]][10] == 0){
