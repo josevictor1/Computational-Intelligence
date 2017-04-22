@@ -106,7 +106,6 @@ int main(int argc, char const *argv[]) {
 
             quickSort(solutions, 0, 179);
 
-
             if(solutions[sorted[0]][10] == 0){
                 count++;
                 find = false;
