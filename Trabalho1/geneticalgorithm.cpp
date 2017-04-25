@@ -209,6 +209,17 @@ int calctotal(int solutions[POP][12]){
     return resp;
 }
 
+void elite(int solutions[TPOP][12]){
+    int i,j;
+
+    quickSort(solutions,0,99,10);
+    for(i = POP; i < TPOP; i++){
+        for(j = 0; j < 12; j++){
+            solutions[i - POP + ELTITETX][j] = solutions[i][j];
+        }
+    }
+}
+
 /*int roulette(int sorted[POP][12], int number){
     int i, sum = 0, position = 0, ;
     i = 0;

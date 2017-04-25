@@ -15,7 +15,7 @@
 #define TOUR 3
 #define MAXFIT 100000
 #define OPTR 1
-#define OPCE
+#define ELITE 1
 #define ELTITETX 20
 
 
@@ -38,3 +38,4 @@ void printmatrix(int solutions[TPOP][12]);
 void cleanarray(int *vet, int n);
 void exchange(int element1[12],int element2[12]);
 int calctotal(int solutions[POP][12]);
+void elite(int solutions[TPOP][12]);

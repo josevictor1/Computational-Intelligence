@@ -91,7 +91,12 @@ int main(int argc, char const *argv[]) {
                 }
             }
 
-            quickSort(solutions, 0, 179, 10);
+            if(ELITE == 0){
+                quickSort(solutions, 0, 179, 10);
+            }
+            else{
+                elite(solutions);
+            }
 
             if(solutions[0][10] == 0){
                 count++;
