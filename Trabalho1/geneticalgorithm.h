@@ -5,6 +5,7 @@
 #include <list>
 #include <string.h>
 
+#define POP 100
 #define TPOP 180
 #define TCROS 80
 #define PMUT 10
@@ -12,7 +13,8 @@
 #define NELEMENT 10
 #define EXPER 100
 #define TOUR 3
-
+#define MAXFIT 100000
+#define OPTR 1
 
 
 int mypow(int number, int expoent);// calculate the expoent
@@ -27,8 +29,9 @@ int search(int vet[10], int value); // realize the search in the array of intege
 void print(int *vet,int n);
 void crossover(int solutions[TPOP][12], int parent1[10], int parent2[10], int number, int range);
 //void quickSort(int solutions[TPOP][12],int *vetor, int comeco, int fim);
-void quickSort(int solutions[180][12], int comeco, int fim);
+void quickSort(int solutions[180][12], int comeco, int fim,int pos);
 void printmatrix(int solutions[TPOP][12]);
 //int verify1(int *vet, int number, int range);
 void cleanarray(int *vet, int n);
 void exchange(int element1[12],int element2[12]);
+int calctotal(int solutions[POP][12]);

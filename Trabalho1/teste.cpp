@@ -108,7 +108,7 @@ int main(){
         //print(solutions[parents[i-1]],12);
         //print(solutions[parents[i]],12);
         //printf("%d\n",number);
-        printf("%d\n",i);
+        //printf("%d\n",i);
         crossover(solutions, parent1, parent2, i%10, 1);
 
 

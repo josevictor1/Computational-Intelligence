@@ -43,6 +43,7 @@ void calcnumbers(int *vet){
     number3 = vet[4]*mypow(10,4) + vet[5]*mypow(10,3) + vet[2]*mypow(10,2) + vet[1]*mypow(10,1) + vet[7];
     //std::cout << "money"<< number3<< '\n';
     vet[10] = abs(number1 - number3);
+    vet[11] = MAXFIT - vet[10];
 }
 
 bool verify(int *vet, int number, int range){
@@ -142,11 +143,12 @@ void crossover(int solutions[180][12], int parent1[10], int parent2[10], int num
 
     calcnumbers(solutions[100 + range - 1]);
     calcnumbers(solutions[100 + range]);
-
+    //print(solutions[100 + range - 1],11);
+    //print(solutions[100 + range],11);
 }
 
 
-void quickSort(int solutions[180][12], int comeco, int fim){
+void quickSort(int solutions[180][12], int comeco, int fim,int pos){
     int pivot,aux[12];
 	int i, j;
 
@@ -155,10 +157,10 @@ void quickSort(int solutions[180][12], int comeco, int fim){
 	j = fim;
 
 	while(i <= j){
-		while(solutions[i][10] < solutions[pivot][10])
+		while(solutions[i][pos] < solutions[pivot][pos])
 			i++;
 
-		while(solutions[j][10] > solutions[pivot][10])
+		while(solutions[j][pos] > solutions[pivot][pos])
 			j--;
 
 		if(i <= j){
@@ -170,13 +172,12 @@ void quickSort(int solutions[180][12], int comeco, int fim){
 	}
 
 	if(j > comeco)
-		quickSort(solutions, comeco, j);
+		quickSort(solutions, comeco, j, pos);
 
 	if(i < fim)
-		quickSort(solutions, j+1, fim);
+		quickSort(solutions, j+1, fim, pos);
 
 }
-
 
 void printmatrix(int solutions[180][12]){
     int i;
@@ -197,3 +198,25 @@ void exchange(int element1[12],int element2[12]){
         element1[i] = element2[i];
     }
 }
+
+int calctotal(int solutions[POP][12]){
+    int i, resp = 0;
+
+    for (i = 0; i < POP; i++) {
+        resp += solutions[i][11];
+    }
+
+    return resp;
+}
+
+/*int roulette(int sorted[POP][12], int number){
+    int i, sum = 0, position = 0, ;
+    i = 0;
+    while(position < number){
+        i++;
+        position += sorted[i][11];
+    }
+
+    return i;
+
+}*/
