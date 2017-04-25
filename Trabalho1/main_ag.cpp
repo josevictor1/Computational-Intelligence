@@ -68,14 +68,6 @@ int main(int argc, char const *argv[]) {
                 //print(parents,80);
             }
 
-/*
-            for(i = 0; i < 80; i++){
-                for(j = 0; j < 10; j++){
-                    printf(" %d ",solutions[parents[i]][j]);
-                }
-                printf("\n");
-            }
-*/
             for(i = 1; i < TCROS; i = i + 2){
                 number = rand()%10;
                 //printf("%d\n",number);

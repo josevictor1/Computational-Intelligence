@@ -15,6 +15,9 @@
 #define TOUR 3
 #define MAXFIT 100000
 #define OPTR 1
+#define OPCE
+#define ELTITETX 20
+
 
 
 int mypow(int number, int expoent);// calculate the expoent
