@@ -1,6 +1,5 @@
 #include "geneticalgorithm.h"
 
-//using namespace std;
 
 int mypow(int number, int expoent){
     int i, aux = number;
@@ -15,7 +14,7 @@ int mypow(int number, int expoent){
 void cleanarray(int *vet, int n){
     int i;
 
-    for (i = 0; i < 0; i++){
+    for (i = 0; i < n; i++){
         vet[i] = 0;
     }
 }
@@ -35,20 +34,60 @@ void calcnumbers(int *vet, int *resultcalculated, int *expectedresult){
 void calcnumbers(int *vet){
 
     int number1 = 0, number2 = 0, number3 = 0;
+
+
     //  | 0-s | 1-e | 2-n | 3-d | 4-m | 5-o|  6-r | 7-y |
     if(CRIPTOPT == 0){
-        number1 = vet[0]*mypow(10,3) +  vet[1]*mypow(10,2) + vet[2]*mypow(10,1) + vet[3];
-        number2 = vet[4]*mypow(10,3) +  vet[5]*mypow(10,2) + vet[6]*mypow(10,1) + vet[1];
-        //std::cout << "send"<< number1 << "more"<< number2 << '\n';
-        number1 = number1 + number2;
-        number3 = vet[4]*mypow(10,4) + vet[5]*mypow(10,3) + vet[2]*mypow(10,2) + vet[1]*mypow(10,1) + vet[7];
-        //std::cout << "money"<< number3<< '\n';
-        vet[10] = abs(number1 - number3);
-        vet[11] = MAXFIT - vet[10];
+        number1 = vet[0] * mypow(10,3) + vet[1] * mypow(10,2) + vet[2] * mypow(10,1) + vet[3];
+        number2 = vet[4] * mypow(10,3) + vet[5] * mypow(10,2) + vet[6] * mypow(10,1) + vet[1];
+        number3 = vet[4] * mypow(10,4) + vet[5] * mypow(10,3) + vet[2] * mypow(10,2) + vet[1] * mypow(10,1) + vet[7];
     }
+    // | 0-e | 1-a | 2-t | 3-h | 4-p | 5-l |
     else if(CRIPTOPT == 1){
-
+        number1 = vet[0] * mypow(10,2) + vet[1] * mypow(10,1) + vet[2];
+        number2 = vet[2] * mypow(10,3) + vet[3] * mypow(10,2) + vet[1] * mypow(10,1) + vet[2];
+        number3 = vet[1] * mypow(10,4) + vet[4] * mypow(10,3) + vet[4] * mypow(10,2) + vet[5] * mypow(10,1) + vet[0];
     }
+    // | 0-c | 1-r | 2-o | 3-s | 4-a | 5-d | 6-n | 7-g | 8-e |
+    else if(CRIPTOPT == 2){
+        number1 = vet[0] * mypow(10,4) + vet[1] * mypow(10,3) + vet[2] * mypow(10,2) + vet[3] * mypow(10,1) + vet[4];
+        number2 = vet[1] * mypow(10,4) + vet[2] * mypow(10,3) + vet[4] * mypow(10,2) + vet[5] * mypow(10,1) + vet[3];
+        number3 = vet[5] * mypow(10,5) + vet[4] * mypow(10,4) + vet[6] * mypow(10,3) + vet[7] * mypow(10,2) + vet[8] * mypow(10,1) + vet[1];
+    }
+    // | 0-c | 1-o | 2-a | 3-l | 4-s | 5-i |
+    else if(CRIPTOPT == 3){
+        number1 = vet[0] * mypow(10,3) + vet[1] * mypow(10,2) + vet[0] * mypow(10,1) + vet[2];
+        number2 = vet[0] * mypow(10,3) + vet[1] * mypow(10,2) + vet[3] * mypow(10,1) + vet[2];
+        number3 = vet[1] * mypow(10,4) + vet[2] * mypow(10,3) + vet[4] * mypow(10,2) + vet[5] * mypow(10,1) + vet[4];
+    }
+    // | 0-d | 1-o | 2-n | 3-a | 4-l | 5-g | 6-e | 7-r | 8-b | 9-t |
+    else if(CRIPTOPT == 4){
+        number1 = vet[0] * mypow(10,5) + vet[1] * mypow(10,4) + vet[2] * mypow(10,3) + vet[3] * mypow(10,2) + vet[4] * mypow(10,1) + vet[0];
+        number2 = vet[5] * mypow(10,5) + vet[6] * mypow(10,4) + vet[7] * mypow(10,3) + vet[3] * mypow(10,2) + vet[4] * mypow(10,1) + vet[0];
+        number3 = vet[7] * mypow(10,5) + vet[1] * mypow(10,4) + vet[8] * mypow(10,3) + vet[6] * mypow(10,2) + vet[7] * mypow(10,1) + vet[9];
+    }
+    number1 = number1 + number2;
+
+    if(TYPEFIT == 0){
+        vet[10] = abs(number1 - number3);
+    }
+    else{
+        int digit1, digit2;
+        vet[10] = MAXFIT;
+        while(number1 >= 1 && number3 >= 1){
+            //printf("number 1: %d\n", number1);
+            //printf("number 3: %d\n", number3);
+            digit1 = number1%10;
+            digit2 = number3%10;
+            if(digit1 == digit2){
+                vet[10]--;
+                //printf("%d\n",vet[10]);
+            }
+            number1 = number1/10;
+            number3 = number3/10;
+        }
+    }
+    vet[11] = MAXFIT - vet[10];
 }
 
 bool verify(int *vet, int number, int range){
@@ -216,12 +255,12 @@ int calctotal(int solutions[POP][12]){
 
 void elite(int solutions[TPOP][12]){
 
-	int i, j;
+	int i, j, aux =((POP*ELITETX)/100);
 
     quickSort(solutions, 0, POP - 1, 10);
     for(i = POP; i < TPOP; i++){
         for(j = 0; j < 12; j++){
-            solutions[i - POP + ELITETX][j] = solutions[i][j];
+            solutions[i - POP + aux][j] = solutions[i][j];
         }
     }
 }
@@ -255,25 +294,4 @@ void printconfiguration(int count, float time){
 	aux = (float(count)*100)/EXPER;
 	printf(" 	TAXA DE CONVERGÊNCIA: %.2f\% \\\\ \n",aux);
 	printf("	TEMPO DE EXECUÇÃO: %.1f segundos \\\\ \n",time);
-}
-
-int newfit(int *vet){
-
-    int i;
-    vet[10] = 0;
-    for(i = 0; i < 10;i++){
-        vet[10] += vet[i];
-    }
-
-    /*
-    int number1 = 0, number2 = 0, number3 = 0;
-    //  | 0-s | 1-e | 2-n | 3-d | 4-m | 5-o|  6-r | 7-y |
-    number1 = vet[0]*mypow(10,3) +  vet[1]*mypow(10,2) + vet[2]*mypow(10,1) + vet[3];
-    number2 = vet[4]*mypow(10,3) +  vet[5]*mypow(10,2) + vet[6]*mypow(10,1) + vet[1];
-    //std::cout << "send"<< number1 << "more"<< number2 << '\n';
-    number1 = number1 + number2;
-    number3 = vet[4]*mypow(10,4) + vet[5]*mypow(10,3) + vet[2]*mypow(10,2) + vet[1]*mypow(10,1) + vet[7];
-    //std::cout << "money"<< number3<< '\n';
-    vet[10] = abs(number1 - number3);
-    vet[11] = MAXFIT - vet[10];*/
 }

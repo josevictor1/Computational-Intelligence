@@ -15,6 +15,7 @@ int main(int argc, char const *argv[]) {
     for(average_iterator = 0; average_iterator < 10; average_iterator++){
         count = 0;
         t_begin = time(NULL);
+        int amostra = 0;
         for(experiment = 0; experiment < EXPER; experiment++){
             // Generate the population
             int number, i, j;
@@ -35,7 +36,7 @@ int main(int argc, char const *argv[]) {
             }
 
             Nger = 0;
-            cleanarray(parents,TCROS);
+            //cleanarray(parents,TCROS);
 
             while (find && Nger < NGEN){
                 if(OPTR == 0){
@@ -90,7 +91,6 @@ int main(int argc, char const *argv[]) {
                         }
                         parents[k] = minelement(solutions, tournamentelements, TOUR);
                     }
-
                 }
 
                 for(i = 1; i < TCROS; i = i + 2){
@@ -101,7 +101,7 @@ int main(int argc, char const *argv[]) {
                 int n1, n2, p, mut;
 
                 //Selecting the mutation's subjects aleatorialy
-                
+
                 for(i = POP; i < TPOP; i++){
                     for(mut = 0; mut < QTDMUT; mut++){
                         p = rand()%POP;
@@ -119,22 +119,6 @@ int main(int argc, char const *argv[]) {
                     }
                 }
 
-    /*
-                for(i = POP; i < TPOP; i++){
-                    p = rand()%POP;
-                    n1 = rand()%10;
-                    n2 = rand()%10;
-                    while (n1 == n2) {
-                        n2 = rand()%10;
-                    }
-                    if(p <= PMUT){
-                        number = solutions[i][n1];
-                        solutions[i][n1] = solutions[i][n2];
-                        solutions[i][n2] = number;
-                        calcnumbers(solutions[i]);
-                    }
-                }
-    */
                 if(ELITE == 0){
                     quickSort(solutions, 0, TPOP - 1, 10);
                 }
@@ -148,6 +132,11 @@ int main(int argc, char const *argv[]) {
                 }
                 else{
                     Nger++;
+
+                    /*if(Nger == 100){
+                        amostra++;
+                        printf("%d\n", amostra);
+                    }*/
                 }
             }
         }
@@ -156,6 +145,7 @@ int main(int argc, char const *argv[]) {
 	    printconfiguration(count,timeprogram);
         average_time += timeprogram;
         average_convergence += (float(count)*100)/EXPER;
+        //printf("%d\n",experiment);
         //printf("average_convergence: %d\n", average_convergence);
     }
     printf("\nMédia de tempo: %f \\\\ \n", average_time/average_iterator);
