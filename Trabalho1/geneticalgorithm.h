@@ -5,7 +5,7 @@
 #include <list>
 #include <string.h>
 
-#define POP 100
+#define POP 50
 #define TCROS int(POP*0.8)
 #define TPOP POP + TCROS
 #define PMUT 50
@@ -13,12 +13,12 @@
 #define NELEMENT 10
 #define EXPER 1000
 #define TOUR 3
-#define MAXFIT 5 // values: 100000(to normal fit), 5(to MONEY, APPLE, DANGER and OASIS), 6(to ROBERT)
+#define MAXFIT 6 // values: 100000(to normal fit), 5(to MONEY, APPLE and OASIS), 6(to DANGER and ROBERT)
 #define OPTR 1
 #define ELITE 1
-#define ELITETX 30
+#define ELITETX 20
 #define QTDMUT 2
-#define CRIPTOPT 2
+#define CRIPTOPT 4
 #define TYPEFIT 1
 
 int mypow(int number, int expoent);// calculate the expoent
