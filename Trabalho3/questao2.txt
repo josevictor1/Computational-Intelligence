@@ -1,0 +1,378 @@
+
+Numeros ensaiados
+
+  1 1 1   
+1       1 
+1       1 
+1       1 
+1       1 
+  1 1 1   
+
+    1     
+  1 1     
+    1     
+    1     
+    1     
+1 1 1 1 1 
+Numero de epocas:3
+Numero verificado:
+
+  1 1 1   
+1       1 
+1       1 
+1       1 
+1       1 
+  1 1 1   
+ The answer is correct: 1
+
+    1     
+  1 1     
+    1     
+    1     
+    1     
+1 1 1 1 1 
+ The answer is correct: 0
+
+  1 1 1   
+1       1 
+1       1 
+1       1 
+1       1 
+  1 1 1   
+ The answer is correct: 0
+
+    1     
+  1 1     
+    1     
+    1     
+    1     
+1 1 1 1 1 
+ The answer is correct: 1
+ Neuronio: 0
+W: 0 0 1 0 1 0 1 -1 -1 0 1 1 0 -1 0 1 1 0 -1 0 1 1 0 -1 0 1 -1 0 0 0 -1 0 0 -1 0 -1 0 -1 1 1 0 -1 -1 0 1 0 -1 -1 0 1 0 -1 -1 0 1 0 -1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ Neuronio: 1
+W: 0 0 1 0 1 0 1 -1 -1 0 1 1 0 -1 0 1 1 0 -1 0 1 1 0 -1 0 1 -1 0 0 0 -1 0 0 -1 0 -1 0 -1 1 1 0 -1 -1 0 1 0 -1 -1 0 1 0 -1 -1 0 1 0 -1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Neuronio: 0
+
+  1 1 1   
+1       1 
+1       1 
+1       1 
+1       1 
+  1 1 1   
+ The answer is correct: 1
+
+  1 1 1   
+1         
+1       1 
+1       1 
+1       1 
+  1 1 1   
+ The answer is correct: 1
+
+  1   1 1 
+1       1 
+1       1 
+1       1 
+1       1 
+  1 1 1   
+ The answer is correct: 1
+
+  1 1 1   
+1 1     1 
+1       1 
+1   1 1 1 
+1       1 
+  1 1 1   
+ The answer is correct: 1
+
+  1 1 1   
+1 1     1 
+1 1     1 
+1 1     1 
+1 1     1 
+  1 1 1   
+ The answer is correct: 1
+
+  1 1 1   
+        1 
+1   1   1 
+1       1 
+1   1   1 
+  1 1   1 
+ The answer is correct: 1
+
+  1 1   1 
+1 1     1 
+        1 
+1       1 
+1       1 
+  1 1 1   
+ The answer is correct: 1
+
+1 1 1 1   
+1       1 
+1   1   1 
+1     1 1 
+1       1 
+  1 1 1   
+ The answer is correct: 1
+
+  1 1 1 1 
+1       1 
+1 1 1 1 1 
+1       1 
+1       1 
+    1 1 1 
+ The answer is correct: 1
+
+1 1       
+1       1 
+1       1 
+  1     1 
+1     1 1 
+  1   1 1 
+ The answer is correct: 1
+Neuronio: 1
+
+  1 1 1   
+1       1 
+1       1 
+1       1 
+1       1 
+  1 1 1   
+ The answer is correct: 0
+
+  1 1 1   
+1       1 
+1       1 
+1       1 
+1       1 
+1 1 1 1   
+ The answer is correct: 0
+
+1 1 1 1   
+1       1 
+1       1 
+1         
+1       1 
+  1 1 1   
+ The answer is correct: 0
+
+  1 1 1   
+1 1     1 
+1       1 
+1       1 
+1 1   1 1 
+  1 1 1   
+ The answer is correct: 0
+
+    1 1   
+1       1 
+1       1 
+1         
+1     1 1 
+  1 1 1   
+ The answer is correct: 0
+
+1 1 1 1   
+1     1 1 
+1       1 
+1         
+        1 
+  1 1 1   
+ The answer is correct: 0
+
+    1     
+1       1 
+1       1 
+1   1   1 
+      1 1 
+  1 1 1 1 
+ The answer is correct: 0
+
+    1 1   
+1       1 
+1 1     1 
+1   1     
+1 1   1   
+  1 1 1   
+ The answer is correct: 0
+
+  1 1 1   
+1 1 1   1 
+1       1 
+1       1 
+1         
+1 1   1   
+ The answer is correct: 0
+
+    1 1   
+1     1 1 
+1       1 
+1       1 
+1       1 
+  1   1 1 
+ The answer is correct: 0
+Neuronio: 0
+
+    1     
+  1 1     
+    1     
+    1     
+    1     
+1 1 1 1 1 
+ The answer is correct: 0
+
+    1     
+  1 1   1 
+    1     
+    1     
+    1     
+1 1 1 1 1 
+ The answer is correct: 0
+
+    1     
+  1 1     
+    1     
+1   1     
+    1     
+1 1 1 1 1 
+ The answer is correct: 0
+
+1 1 1     
+  1 1     
+    1     
+          
+    1     
+1 1 1 1 1 
+ The answer is correct: 0
+
+    1     
+    1     
+    1     
+      1   
+    1     
+1   1 1 1 
+ The answer is correct: 0
+
+    1 1   
+  1 1     
+1   1     
+  1 1     
+    1     
+1 1 1 1 1 
+ The answer is correct: 0
+
+    1 1   
+  1 1     
+    1   1 
+    1     
+    1     
+1     1 1 
+ The answer is correct: 0
+
+  1 1     
+  1 1     
+          
+    1 1   
+    1     
+  1 1 1 1 
+ The answer is correct: 0
+
+    1     
+  1 1     
+    1 1   
+    1   1 
+    1   1 
+1         
+ The answer is correct: 0
+
+  1 1     
+1         
+    1   1 
+1 1 1     
+1 1 1     
+1 1 1 1 1 
+ The answer is correct: 0
+Neuronio: 1
+
+    1     
+  1 1     
+    1     
+    1     
+    1     
+1 1 1 1 1 
+ The answer is correct: 1
+
+    1     
+  1 1     
+    1     
+    1     
+    1 1   
+1 1 1 1 1 
+ The answer is correct: 1
+
+    1     
+  1 1     
+    1     
+    1   1 
+1   1     
+1 1 1 1 1 
+ The answer is correct: 1
+
+    1     
+  1 1     
+    1     
+1 1       
+    1     
+1 1 1 1 1 
+ The answer is correct: 1
+
+    1   1 
+  1 1     
+    1     
+          
+    1     
+1 1 1 1 1 
+ The answer is correct: 1
+
+1   1     
+    1     
+    1   1 
+    1 1   
+    1   1 
+1 1 1 1 1 
+ The answer is correct: 1
+
+    1     
+  1       
+1   1     
+    1 1 1 
+  1 1     
+1   1 1 1 
+ The answer is correct: 1
+
+        1 
+1 1 1     
+  1 1     
+    1     
+    1 1   
+1 1 1 1 1 
+ The answer is correct: 1
+
+          
+  1 1 1 1 
+    1     
+        1 
+1   1     
+1   1   1 
+ The answer is correct: 1
+
+    1 1   
+          
+    1 1 1 
+    1     
+    1     
+1 1   1 1 
+ The answer is correct: 1

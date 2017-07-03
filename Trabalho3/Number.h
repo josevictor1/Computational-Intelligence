@@ -1,19 +1,30 @@
 #pragma once
+#include <utility>
+#include <iostream>
+#include <random>
 
 #define DEFAULT_WEIGHT 0
-#define NNEURON 1
-using Random = std::default_random_engine;
+#define NNEURONS 1
+#define NNUMBERS 6
+#define ENTRYS 31
+//using Random = std::default_random_engine;
 using namespace std;
 
+
 class Number{
-    int representation[31];
-    int weight[31][NNEURON];
+    int number;
+    double representation[31];   
+    
 
 public:
-    Number();
-    Number(int option);
-    void setRepresentation(int representation[31]);
-    int* getRepresentation();
-    void setWeigt(int weight[31]);
-    int* getWeight();
-}
+   
+    void setNumber(int number);
+    int getNumber();
+    void printNumber();    
+    void choiceRepresentation();
+    void setRepresentation(double representation[31]);
+    double* getRepresentation();
+    void invertNumbers(int position);
+    void generateModifications(int nmodifications);
+    void setWithLetter(int option);
+};

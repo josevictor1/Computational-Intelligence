@@ -7,11 +7,10 @@ CXXFLAGS += -g -std=c++11 -Wall
 
 all: $(ALL)
 	@sync
-
 clean:
 	@$(RM) $(ALL)
 
 rebuild: clean all
 
-datamining: Number.cpp Main.cpp main.cpp
+redesneurais: Number.cpp Main.cpp Neuron.cpp 
 	$(CXX) $(CXXFLAGS) $^ -o $@
