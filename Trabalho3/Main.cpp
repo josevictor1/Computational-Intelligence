@@ -1,12 +1,12 @@
 
 #include "Neuron.h"
 
-#define TYPEW 0 
-#define NEURONRANGE 6
-#define NUMBERRANGE 6 /*exercise 1 - 2*/
-#define NUMBERTESTRANGE 6
-#define DISTORTIONRANGE 6
-#define WITHLETTERS 1
+#define TYPEW 0
+#define NEURONRANGE 2
+#define NUMBERRANGE 2 /*exercise 1 - 2*/
+#define NUMBERTESTRANGE 2
+#define DISTORTIONRANGE 2
+#define WITHLETTERS 0
 
 int main(int argc, char const *argv[]){
 
