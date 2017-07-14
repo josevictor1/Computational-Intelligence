@@ -1,0 +1,4 @@
+clang++ -g -std=c++11 -Wall Ant.cpp Graph.cpp Main.cpp -o antcolony
+Makefile:17: recipe for target 'antcolony' failed
+clang++ -g -std=c++11 -Wall Ant.cpp Graph.cpp Main.cpp -o antcolony
+Makefile:17: recipe for target 'antcolony' failed
